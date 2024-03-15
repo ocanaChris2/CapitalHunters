@@ -88,14 +88,15 @@ header {
     display: flex;
     justify-content: space-between;
     position: relative;
+    overflow-x: hidden;
 
     &::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 1;
-        opacity: 0.45;
+        z-index: 3;
+        opacity: 0.5;
         background-image: url('../css/noise.svg');
         transition: opacity 0.3s ease-in-out; /* Transición añadida */
     }
@@ -119,14 +120,25 @@ header {
 
 .left-side .circle-face {
     position: absolute;
-    z-index: 1;
-    transform: translateX(35rem) translateY(90rem) rotate(50deg);
-    min-width: 20%;
-    min-height: 20%;
+    z-index: 99;
+    transform: rotate(50deg) translateX(90rem) translateY(45rem);
+    min-width:  15%;
+    min-height: 15%;
     background: url('../img/chad-greiter--0gBnnMdQPw-unsplash.jpg');
     background-position: center;
     background-size: cover;
     border-radius: 1000px;
+}
+
+.container-text {
+  width:  230px;
+  height: 150px;
+ transform: translateX(530px) translateY(680px) rotate(50deg);
+  position: absolute;
+  z-index: 5;
+  font-size: 1.6rem;
+  text-align: justify;
+  color: #fff;
 }
 
 .right-triangle {
@@ -140,7 +152,7 @@ header {
     background: linear-gradient(270deg, rgba(252,4,252,1) 0%, rgba(250,36,251,1) 0%, rgba(186,4,202,1) 37%, rgba(151,1,151,1) 50%, rgba(149,2,150,1) 62%, rgba(138,2,150,1) 86%); 
     transform: rotate(-50deg);
     box-shadow: -10px 0px 20px 1px rgba(0, 0, 0, 0.6);
-    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Transiciones añadidas */
+    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out, box-shadow 0.5s ease-in-out; 
     
 }
 
@@ -186,19 +198,15 @@ header {
 .navbar {
   /*box-shadow: 0px 5px 10px 0px #aaa;*/
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
+  z-index: 99;
   width: 100%;
-  color: #000;
+  color: #fff;
   opacity: 0.85;
   height: 50px;
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .navbar-container {
@@ -216,7 +224,7 @@ text-transform: uppercase;
 
 .menu-items li {
   list-style: none;
-  margin-left: 7rem;
+  margin-left: 4rem;
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
 }
@@ -224,7 +232,7 @@ text-transform: uppercase;
 
 .menu-items a {
   text-decoration: none;
-  color: black;
+  color: #fff;
   transition: color 0.3s ease-in-out;
   width: 10px;
   padding: 5px;
@@ -416,6 +424,12 @@ text-transform: uppercase;
   top: 40%;
 }
 
+.quotation {
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
+}
+
 /* .........../Food Menu/............ */
 
 .food-menu-heading {
@@ -591,6 +605,13 @@ text-transform: uppercase;
 /* ......../ media query /.......... */
 
 @media (max-width: 768px) {
+
+  .menu-items a:hover {
+    color: black;
+    background: white;
+  }
+
+
   .navbar {.menu-items li {
   list-style: none;
   margin-left: 10rem;
@@ -618,7 +639,7 @@ text-transform: uppercase;
     height: 32px;
     width: 30px;
     top: 20px;
-    left: 20px;
+    right: 20px;
     z-index: 5;.menu-items li {
   list-style: none;
   margin-left: 10rem;
@@ -630,12 +651,12 @@ text-transform: uppercase;
   }
 
   .navbar-container .hamburger-lines {
-    display: block;
+
     height: 23px;
     width: 35px;
     position: absolute;
     top: 17px;
-    left: 20px;
+    right: 20px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -648,7 +669,7 @@ text-transform: uppercase;
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: black;
+    background: white;
   }
 
   .navbar-container .hamburger-lines .line1 {
@@ -667,10 +688,7 @@ text-transform: uppercase;
 
   .navbar .menu-items {
     padding-top: 100px;
-background: rgba(255, 255, 255, 0.37);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(7.3px);
+    background: black;
     height: 100vh;
     max-width: 300px;
     transform: translate(-150%);
@@ -735,6 +753,14 @@ backdrop-filter: blur(10px);
 @media (max-width: 500px) {
   html {
     font-size: 100%;
+  }
+
+
+  
+
+  .menu-items a:hover {
+    color: black;
+    background: white;
   }
 
   .navbar .menu-items li{
