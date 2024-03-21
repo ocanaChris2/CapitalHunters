@@ -335,15 +335,19 @@ header {
 }
 
 main {
-  width: 100dvw;
-  height: 100dvh;
+  min-width: 100dvw;
+  min-height: 100dvh;
   display: flex;
   overflow: hidden;
 }
 
 main .video-section {
-  width: 100%;
-  height: 100%;
+    width: 100dvw;
+    min-height: 100rem;
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+
 }
 
 .video-text-description .video-header {
@@ -352,24 +356,24 @@ font-size: 2.3rem;
 }
 
 .myVideo {
-  min-width: 100%;
-  max-height: 100dvh;
-  position: absolute;
-  z-index: 2;
+    min-width: 100dvw;
+    min-height: 100dvh;
+    position: absolute;
+    z-index: 2;
 }
 
 .video-text-description {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   margin: 0;
-  padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+  padding: 0;
   color: #fff;
   width: 100%;
-  height: 16rem;
+  height: 25rem;
   background: black;
   opacity: 0.5;
   position: absolute;
-  bottom: -100dvh;
+  bottom: -115dvh;
   z-index: 3;
 }
 
@@ -722,13 +726,19 @@ font-size: 2.3rem;
 
 
 .adn {
+  margin: 0;
+  padding: 0;
   width: 100dvw;
   height: 100dvh;
   background: rgb(103,174,190);
 background: linear-gradient(270deg, rgba(103,174,190,1) 13%, rgba(203,226,231,1) 43%, rgba(153,201,212,1) 53%, rgba(153,201,212,1) 77%); 
-  position: absolute;
+  position: relative;
   z-index: 3;
   overflow: hidden;
+    display: flex;
+
+    justify-content: center;
+
 
 
   &::after {
@@ -749,7 +759,7 @@ background: linear-gradient(270deg, rgba(103,174,190,1) 13%, rgba(203,226,231,1)
   height: 25rem;
    background: rgb(172,176,248);
 background: linear-gradient(270deg, rgba(172,176,248,1) 0%, rgba(144,150,245,1) 0%, rgba(207,213,251,1) 37%, rgba(126,138,242,1) 69%); 
-  transform: translate(-20rem, 20rem) rotate(50deg);
+  transform: translate(10rem, 20rem) rotate(50deg);
 box-shadow: 0 -5px 3px rgb(0, 0, 0, 0.3);
 position: absolute;
 z-index: 2;
@@ -762,12 +772,29 @@ z-index: 2;
   z-index: 1;
   width:  150rem;
   height: 40rem;
-  transform: translate(-50rem, 0rem) rotate(-50deg);
+  transform: translate(-10rem, 0rem) rotate(-50deg);
    background: rgb(103,174,190);
 background: linear-gradient(270deg, rgba(103,174,190,1) 13%, rgba(203,226,231,1) 43%, rgba(153,201,212,1) 53%, rgba(153,201,212,1) 77%); 
 box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
 }
 
+
+.cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.our-team-card {
+    width: 250px;
+    height: 150px;
+    background: black;
+    position: absolute;
+    top: 5rem;
+    z-index: 3;
+
+}
 
 
 
