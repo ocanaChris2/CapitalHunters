@@ -1,4 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+*/
+
+
+
+
+:root {
+
+  /*Gradient Colors Theme 1 */
+  --gradientTheme1Color1 : #AE04EA;
+  --gradientTheme1Color2 : #9B54F5;
+  --gradientTheme1Color3 : #6704CC;
+  --gradientTheme1Color4 : #6B03B0;
+
+  /*Gradient Colors Theme 2 */
+  --gradientTheme2Color1 : #71b4c4;
+  --gradientTheme2Color2 : #99c9d4;
+  --gradientTheme2Color3 : #cbe2e7;
+  --gradientTheme2Color4 : #67aebe;
+
+  --gradientTheme2Color5 :#acb0f8;
+  --gradientTheme2Color6: #9096f5;
+  --gradientTheme2Color7: #9aa3f7;
+  --gradientTheme2Color8: #cfd5fb;
+  --gradientTheme2Color9: #7e8af2;
+
+
+
+  /*Gradient Colors Theme 3 */
+
+}
+
 
 *, html {
     padding: 0;
@@ -8,77 +43,11 @@
   
 }
 
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+body {
+  font-family: "Raleway", sans-serif;
 }
 
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
 
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.roboto-light-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
 
 header {
     width: 100vw;
@@ -87,9 +56,9 @@ header {
     background: linear-gradient(110deg, rgba(174,4,234,1) 0%, rgba(155,84,245,1) 38%, rgba(103,4,204,1) 69%, rgba(107,3,176,1) 85%, rgba(68,8,144,1) 89%, rgba(75,2,150,1) 100%);
     animation: gradient-animation 32s ease infinite;*/
   animation: animateBg 8s linear infinite;
-  background-image: linear-gradient(90deg,#AE04EA,#9B54F5,#6704CC,#6B03B0,#4B0296, #AE04EA, #9B54F5);
-  background-size: 700% 100%;
-   display: flex;
+  background-image: linear-gradient(90deg,var(--gradientTheme1Color1),var(--gradientTheme1Color2),var(--gradientTheme1Color3), var(--gradientTheme1Color4),var(--gradientTheme1Color4), var(--gradientTheme1Color1), var(--gradientTheme1Color2));
+    background-size: 700% 100%;
+    display: flex;
     justify-content: space-between;
     position: relative;
     overflow-x: hidden;
@@ -366,24 +335,41 @@ header {
 }
 
 main {
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
+  overflow: hidden;
+}
+
+main .video-section {
+  width: 100%;
+  height: 100%;
+}
+
+.video-text-description .video-header {
+text-align: center;
+font-size: 2.3rem;
 }
 
 .myVideo {
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  max-height: 100dvh;
   position: absolute;
   z-index: 2;
 }
 
 .video-text-description {
-  width: 20rem;
-  height: 30rem;
-  background: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+  color: #fff;
+  width: 100%;
+  height: 16rem;
+  background: black;
+  opacity: 0.5;
   position: absolute;
-  
+  bottom: -100dvh;
   z-index: 3;
 }
 
@@ -733,6 +719,57 @@ main {
 }
 */
 /* ......../ media query /.......... */
+
+
+.adn {
+  width: 100dvw;
+  height: 100dvh;
+  background: rgb(103,174,190);
+background: linear-gradient(270deg, rgba(103,174,190,1) 13%, rgba(203,226,231,1) 43%, rgba(153,201,212,1) 53%, rgba(153,201,212,1) 77%); 
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
+
+
+  &::after {
+     content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        opacity: 0.85;
+        background-image: url('../css/noise.svg');
+        transition: opacity 0.3s ease-in-out; /* Transición añadida */
+  }
+}
+
+
+.adn .blue-rect {
+  width: 190%;
+  height: 25rem;
+   background: rgb(172,176,248);
+background: linear-gradient(270deg, rgba(172,176,248,1) 0%, rgba(144,150,245,1) 0%, rgba(207,213,251,1) 37%, rgba(126,138,242,1) 69%); 
+  transform: translate(-20rem, 20rem) rotate(50deg);
+box-shadow: 0 -5px 3px rgb(0, 0, 0, 0.3);
+position: absolute;
+z-index: 2;
+}
+
+
+
+.adn .green-rect {
+  position: absolute;
+  z-index: 1;
+  width:  150rem;
+  height: 40rem;
+  transform: translate(-50rem, 0rem) rotate(-50deg);
+   background: rgb(103,174,190);
+background: linear-gradient(270deg, rgba(103,174,190,1) 13%, rgba(203,226,231,1) 43%, rgba(153,201,212,1) 53%, rgba(153,201,212,1) 77%); 
+box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.3);
+}
+
+
+
 
 @media (max-width: 768px) {
 
