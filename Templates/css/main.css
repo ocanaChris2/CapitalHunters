@@ -93,6 +93,7 @@ header {
     justify-content: space-between;
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
 
 
 
@@ -213,7 +214,7 @@ header {
 }
 
 .right-triangle {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     left: 80%;
     top: -15rem;
@@ -274,7 +275,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   width: 100%;
   color: #fff;
@@ -318,14 +319,10 @@ header {
   transition: color 0.3s ease-in-out;
 }
 
-.logo {
-  order: 1;
-  font-size: 2.3rem;
-  margin-bottom: 0.5rem;
-}
 
 /* ............//// Showcase styling ////......... */
 
+/*
 .showcase-area {
   height: 50vh;
   background: linear-gradient(
@@ -351,8 +348,49 @@ header {
   text-transform: uppercase;
   margin-top: 1.5em;
 }
+*/
+
+.text-container-right {
+  text-decoration: dashed;
+  text-overflow: ellipsis;
+  filter: drop-shadow(5px 15px 5px black);
+
+  max-width: 40rem;
+  min-width: 35rem;
+  height: 20rem;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 2.5rem;
+  transform: translate(12rem, 70rem);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.myVideo {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 2;
+}
+
+.video-text-description {
+  width: 20rem;
+  height: 30rem;
+  background: white;
+  position: absolute;
+  
+  z-index: 3;
+}
+
 
 /* ......//about us//...... */
+
+/*
 
 #about {
   padding: 50px 0;
@@ -414,8 +452,10 @@ header {
   object-fit: cover;
   object-position: right;
 }
-
+*/
 /* ..........////Food category///........... */
+
+/*
 
 #food {
   padding: 5rem 0 10rem 0;
@@ -497,6 +537,7 @@ header {
   opacity: 1;
   top: 40%;
 }
+*/
 
 .quotation-1 {
   font-family: 'Roboto', sans-serif;
@@ -517,6 +558,7 @@ header {
 
 /* .........../Food Menu/............ */
 
+/*
 .food-menu-heading {
   text-align: center;
   font-size: 3.4rem;
@@ -566,8 +608,10 @@ header {
   color: #117964;
   font-weight: 700;
 }
-
+*/
 /* ........./ Testimonial /.......... */
+
+/*
 
 #testimonials {
   padding: 5rem 0;
@@ -611,9 +655,10 @@ header {
   border-radius: 50%;
   margin: auto;
 }
-
+*/
 /* ........ Contact Us........... */
 
+/*
 #contact {
   padding: 5rem 0;
   background: rgb(226, 226, 226);
@@ -686,7 +731,7 @@ header {
   color: #fff;
   background: rgb(65, 65, 65);
 }
-
+*/
 /* ......../ media query /.......... */
 
 @media (max-width: 768px) {
@@ -719,7 +764,7 @@ header {
   }
 
   .navbar-container input[type="checkbox"] {
-    position: absolute;
+    position: fixed;
     display: block;
     height: 32px;
     width: 30px;
@@ -739,7 +784,7 @@ header {
 
     height: 23px;
     width: 35px;
-    position: absolute;
+    position: fixed;
     top: 17px;
     right: 20px;
     z-index: 2;
@@ -813,6 +858,7 @@ header {
 
   /* ......./ food /......... */
 
+  /*
   .food-container {
     flex-direction: column;
     align-items: stretch;
@@ -824,12 +870,14 @@ header {
 
   .food-type {
    /* box-shadow: 5px 5px 10px 0 #aaa;*/
+   /*
   }
 
   .img-container {
     margin: 0;
   }
 }
+*/
 
 @media (max-width: 500px) {
   html {
@@ -848,6 +896,7 @@ header {
       font-size: 1.6rem;
   }
 
+  /*
   .testimonial-container {
     flex-direction: column;
     text-align: center;
@@ -883,6 +932,8 @@ header {
     font-size: 3rem;
   }
 
+  */
+
   .navbar .menu-items li {
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
@@ -890,6 +941,8 @@ header {
     
   }
 }
+
+/*
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .img-container h3 {
@@ -900,9 +953,15 @@ header {
     font-size: 0.7rem;
   }
 }
+*/
+
+/*
 
 @media (orientation: landscape) and (max-height: 500px) {
   .showcase-area {
     height: 50vmax;
   }
 }
+*/
+}
+
