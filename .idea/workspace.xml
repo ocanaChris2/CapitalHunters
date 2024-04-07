@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da408bfc-3302-453d-8b5f-0e84d928c156" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Templates/css/iPhone.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/iPhone.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/iphoneTemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/iphoneTemplate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +42,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,6 +61,7 @@
       <workItem from="1711394717882" duration="1870000" />
       <workItem from="1711993860367" duration="1576000" />
       <workItem from="1712093416127" duration="684000" />
+      <workItem from="1712252804659" duration="606000" />
     </task>
     <servers />
   </component>
